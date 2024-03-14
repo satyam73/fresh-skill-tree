@@ -8,7 +8,7 @@ import { URLS } from "@/constants/urls";
 export default function RequestBoardTable({ openDetails }: { openDetails: () => void }) {
     const { data: endorsements, isLoading } = useGetEndorsements();
     console.log(endorsements, isLoading); //will remove this when BE APIs are ready
-    console.log(process.env.NEXT_PUBLIC_APP_ENV, URLS)
+    console.log(process.env.NEXT_PUBLIC_APP_ENV, URLS);
     const renderBoardDetailsRow = requestBoardData.map((skillItem, index) => (
         <BoardDetailsRow
             key={skillItem.id}
